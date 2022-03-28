@@ -7,6 +7,7 @@ var {
   listItems,
   searchOrder
 } = require("../src/order");
+// getting acceess order.js
 
 describe("order.js", function() {
   describe("takeOrder", function() {
@@ -40,7 +41,7 @@ describe("order.js", function() {
       assert.equal(deliveryOrders[1], order2);
     });
 
-    it.skip("should add another order to an order type list", function () {
+    it.skip("should add another order to an order typelist", function () {
 
       var order1 = {
         orderNumber: 1,
@@ -117,14 +118,22 @@ describe("order.js", function() {
       assert.equal(deliveryOrders.length, 3);
       assert.deepEqual(deliveryOrders, [order1, order2, order3]);
     });
-  }); 
+  });
+
+
+
+
+
+
+
+
 
   describe("refundOrder", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(refundOrder);
     });
 
-    it.skip("should remove an order by order number", function() {
+    it("should remove an order by order number", function() {
       var order1 = {
         orderNumber: 1657,
         item: "burger",
@@ -157,7 +166,7 @@ describe("order.js", function() {
       assert.deepEqual(deliveryOrders, [order2, order3])
     });
 
-    it.skip("should remove a different order by order number", function () {
+    it("should remove a different order by order number", function () {
       var order1 = {
         orderNumber: 1241,
         item: "burger",
@@ -185,7 +194,7 @@ describe("order.js", function() {
       var deliveryOrders = [order1, order2, order3];
 
       refundOrder(2893, deliveryOrders);
-
+//  telling me first second parameter , these are argument above
       assert.equal(deliveryOrders.length, 2);
       assert.deepEqual(deliveryOrders, [order1, order3])
     });

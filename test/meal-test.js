@@ -12,11 +12,11 @@ var {
 
 describe("meal.js", function() {
   describe("nameMenuItem", function() {
-    it("should be a function", function() {
+    it.skip("should be a function", function() {
      assert.isFunction(nameMenuItem);
     });
 
-    it.skip("should take in a name and make a delicious name", function () {
+    it.skip("sho.skipuld take in a name and make a delicious name", function () {
       var menuItemName = nameMenuItem("Pizza");
       assert.equal(menuItemName, "Delicious Pizza");
     });
@@ -142,7 +142,6 @@ describe("meal.js", function() {
       assert.deepEqual(recipe.ingredients, ["eggs", "bacon"]);
       assert.equal(recipe.type, "breakfast");
     });
-
 
     it.skip("should return a different recipe object", function () {
       var ingredients = [];
